@@ -14,4 +14,12 @@ public interface UserService {
     String findUserPassword(String contactNumber);
 
     User findUser(String contactNumber);
+
+    void save(User profile);
+
+    User updateUser(String firstName, String lastName, Integer userId);
+
+    User getUserById(Integer userId);
+
+    void updatePassword(String newPassword,Integer userId);
 }
