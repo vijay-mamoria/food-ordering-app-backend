@@ -29,4 +29,31 @@ public class UserServiceImpl implements UserService{
         return userRepository.findUser(contactNumber);
     }
 
+    @Override
+    public void save(User profile){
+        userRepository.save(profile);
+    }
+
+    @Override
+    public User updateUser( String firstName, String lastName, Integer userId){
+        Optional<User> userObj = userRepository.findById(userId);
+        User user = userObj.get();
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        userRepository.save(user);
+        return user;
+    }
+
+    @Override
+    public User getUserById(Integer userId){
+        Optional<User> user = userRepository.findById(userId);
+        return user.get();
+    }
+
+    @Override
+    public void updatePassword(String newPassword,Integer userId){
+        userRepository.updatePassword(newPassword,userId);
+    }
+
+
 }
