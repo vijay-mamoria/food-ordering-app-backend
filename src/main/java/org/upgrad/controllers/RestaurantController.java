@@ -1,5 +1,4 @@
 package org.upgrad.controllers;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +11,6 @@ import org.upgrad.services.UserAuthTokenService;
 import org.upgrad.services.UserService;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/restaurant")
 public class RestaurantController {

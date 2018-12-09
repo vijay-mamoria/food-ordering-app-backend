@@ -26,6 +26,18 @@ public class Address {
     @JoinColumn(name = "stateId")
     private States state;
 
+    public Address() {
+    }
+
+    public Address(Integer id , String flat_buil_number, String locality, String city, String zipcode, States state) {
+        this.id = id ;
+        this.flatNumber = flat_buil_number ;
+        this.city = city ;
+        this.locality = locality ;
+        this.zipcode = zipcode ;
+        this.state = state ;
+    }
+
     public Integer getId() {
         return id;
     }
