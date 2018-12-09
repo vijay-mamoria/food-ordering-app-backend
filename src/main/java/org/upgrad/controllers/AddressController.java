@@ -37,7 +37,7 @@ public class AddressController {
                 Address address = new Address(addressId ,flatBuilNo, locality, city, zipcode, state);
                 addressService.addAddress(address);
                 if ( null == type )
-                    addType = type ;
+                    type = addType ;
                 addressService.addUserAddress(type, userId, addressId) ;
                 message ="Address has been saved successfully!" ;
                 httpStatus = HttpStatus.CREATED ;
